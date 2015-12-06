@@ -12,7 +12,7 @@
 	}
 
 	/**
-	 * Creates a new todo model
+	 * Creates a new person model
 	 *
 	 * @param {string} [title] The title of the task
 	 * @param {function} [callback] The callback to fire after the model is created
@@ -91,26 +91,26 @@
 	};
 
 	/**
-	 * Returns a count of all todos
+	 * Returns a count of all persons
 	 */
 	Model.prototype.getCount = function (callback) {
-		var todos = {
+		var persons = {
 			active: 0,
 			completed: 0,
 			total: 0
 		};
 
 		this.storage.findAll(function (data) {
-			data.forEach(function (todo) {
-				if (todo.completed) {
-					todos.completed++;
+			data.forEach(function (person) {
+				if (person.completed) {
+					persons.completed++;
 				} else {
-					todos.active++;
+					persons.active++;
 				}
 
-				todos.total++;
+				persons.total++;
 			});
-			callback(todos);
+			callback(persons);
 		});
 	};
 
