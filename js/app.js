@@ -10,11 +10,12 @@
 		this.controller = new app.Controller(this.model, this.view);
 	}
 
-	var Person = new Person('persons-vanillajs');
+	var person = new Person('persons-vanillajs');
 
 	function setView() {
-		todo.controller.setView(document.location.hash);
+		person.controller.setView(document.location.hash);
 	}
+	
 	$on(window, 'load', setView);
 	$on(window, 'hashchange', setView);
 })();
