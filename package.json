@@ -1,18 +1,21 @@
 {
   "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "todomvc-common": "^1.0.1",
-    "todomvc-app-css": "^2.0.1"
-  },
-  "devDependencies": {
-    "jasmine-core": "^2.0.0"
-  },
-  "dependencies": {
-  	"express"         : "~4.6.1",
+    "todomvc-app-css": "^2.0.1",
+    "express"         : "~4.6.1",
     "pg"        	  : "4.x",
     "morgan"          : "~1.1.1",
     "body-parser"     : "~1.4.3",
     "method-override" : "~2.1.1",
-    "lodash"		  : "~3.9.3"
-  	},
+    "lodash"		  : "~3.9.3",
+    "jasmine-core": "^2.0.0"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.0.0"
+  }
 }
